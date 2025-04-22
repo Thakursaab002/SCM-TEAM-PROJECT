@@ -65,3 +65,49 @@ p {
     font-weight: 500;
     color: white;
 }
+.btn1, .btn2, .btn-login {
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: #2468b1;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-left: 40px;
+    margin-top: 40px;
+    transition: background-color 0.1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-login {
+    background-color: #28a745;
+}
+
+.btn1:hover, .btn2:hover, .btn-login:hover {
+    background-color: black;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-login:hover {
+    background-color: #218838;
+}
+.papa{
+    margin-top: 5%;
+}
+
+#project {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 110px;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background: #0f0c29;  
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: whitesmoke;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 40px;
+    height: auto;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
