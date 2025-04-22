@@ -350,4 +350,49 @@ a:hover {
     background-color: #e67e22;
     color: #fff;
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px;
+    }
 
+    nav a {
+        margin: 10px 0;
+    }
+
+    .btn1, .btn2, .btn-login {
+        padding: 8px 20px;
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    #todo {
+        font-size: 35px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    #project {
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 20px;
+    }
+
+    .footer {
+        padding: 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .footer-brand h1 {
+        font-size: 24px;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+}
