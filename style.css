@@ -58,3 +58,10 @@ nav a:hover {
 p {
     margin-left: 40px;
 }
+#todo {
+    font-size: 60px;
+    margin-left: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    color: white;
+}
