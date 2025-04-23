@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us - To-Do List</title>
+    <link rel="stylesheet" href="contact.css">
+    <style>
+        .collaboration-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .collaboration-container h2 {
+            text-align: center;
+            color: #6a0dad;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .collaboration-container p {
+            text-align: center;
+            color: #555;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .collaboration-container a {
+            color: #6a0dad;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .collaboration-container a:hover {
+            color: #ffd700;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="Conditions.html">Terms and Conditions</a>
+            <a href="contact.html" class="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Whether you have a question, feedback, or need assistance, feel free to reach out to us using the form below.</p>
+            <form id="contactForm" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section class="collaboration-container">
+            <h2>Collaborate with Us</h2>
+            <p>Interested in working together? Whether you're a developer, designer, or looking to partner, we'd love to hear from you! Reach out to us via the contact form above or directly at the details below.</p>
+            <p><strong>Email:</strong> <a href="#">sushantsahil@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="#">9192981450</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 To-Do List. All rights reserved.</p>
+    </footer>
 </body>
 </html>
