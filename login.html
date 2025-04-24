@@ -3,69 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
-  <link rel="stylesheet" href="login.css">
+  <title>Document</title>
 </head>
 <body>
-<div class="wrapper">
+  <div class="wrapper">
 
-  <div class="login-box">
-    <form id="loginForm">
-      <h2>Login</h2>
-
-      <div class="input-box">
-        <span class="icon">
-          <ion-icon name="mail"></ion-icon>
-        </span>
-        <input type="text" id="username" required>
-        <label>Username</label>
-      </div>
-
-      <div class="input-box">
-        <span class="icon">
-          <ion-icon name="lock-closed"></ion-icon>
-        </span>
-        <input type="password" id="password" required>
-        <label>Password</label>
-      </div>
-
-      <div class="remember-forgot">
-        <label><input type="checkbox"> Remember me</label>
-        <a href="#">Forgot Password?</a>
-      </div>
-
-      <button type="submit">Login</button>
-
-      <div class="register-link">
-        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
-      </div>
-    </form>
-  </div>
-</div>
-
-<script>
-  const form = document.getElementById("loginForm");
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    const enteredUsername = document.getElementById("username").value;
-    const enteredPassword = document.getElementById("password").value;
-
-    const users = JSON.parse(localStorage.getItem("users")) || [];
-
-    const matchedUser = users.find(user => 
-      user.username === enteredUsername && user.password === enteredPassword
-    );
-
-    if (matchedUser) {
-      localStorage.setItem("loggedInUser", matchedUser.username);
-      alert("Login successful!");
-      window.location.href = "index.html";
-    } else {
-      alert("Invalid username or password. Please try again.");
-    }
-  });
-</script>
+    <div class="login-box">
+      <form id="loginForm">
+        <h2>Login</h2>
+  
+        <div class="input-box">
+          <span class="icon">
+            <ion-icon name="mail"></ion-icon>
+          </span>
+          <input type="text" id="username" required>
+          <label>Username</label>
+        </div>
+  
+        <div class="input-box">
+          <span class="icon">
+            <ion-icon name="lock-closed"></ion-icon>
+          </span>
+          <input type="password" id="password" required>
+          <label>Password</label>
+        </div>
+  
 </body>
 </html>
