@@ -41,7 +41,6 @@
     </div>
   </div>
   <script>
-    <script>
   const form = document.getElementById("loginForm");
 
   form.addEventListener("submit", (event) => {
@@ -55,8 +54,14 @@
     const matchedUser = users.find(user => 
       user.username === enteredUsername && user.password === enteredPassword
     );
-
-
+    if (matchedUser) {
+      localStorage.setItem("loggedInUser", matchedUser.username);
+      alert("Login successful!");
+      window.location.href = "index.html";
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  });
   </script>
   
   
