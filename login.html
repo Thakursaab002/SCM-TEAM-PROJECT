@@ -41,7 +41,22 @@
     </div>
   </div>
   <script>
-    
+    <script>
+  const form = document.getElementById("loginForm");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const enteredUsername = document.getElementById("username").value;
+    const enteredPassword = document.getElementById("password").value;
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    const matchedUser = users.find(user => 
+      user.username === enteredUsername && user.password === enteredPassword
+    );
+
+
   </script>
   
   
