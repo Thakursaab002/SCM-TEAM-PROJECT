@@ -93,5 +93,46 @@
   .remember-forgot a:hover {
     text-decoration:underline;
   }
+  button {
+    width:100%;
+    height:40px;
+    background-color:#fff;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1em;
+    color:#000;
+    font-weight:500;
+  }
+  .register-link {
+    font-size:.9em;
+    color:#fff;
+    text-align:center;
+    margin:25px 0 10px;
+  }
+  .register-link p a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .register-link p a:hover {
+    text-decoration:underline;
+  }
+  @media (max-width:500px) {
+    .login-box {
+      width:100%;
+      height:100vh;
+      border:none;
+      border-radius:0;
+    }
+    .input-box {
+      width:290px;
+    }
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
   
   
