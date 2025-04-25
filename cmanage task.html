@@ -39,3 +39,53 @@
             <p>&copy; 2024 Task Manager. All rights reserved.</p>
         </footer>
         </div>
+        <script>
+            function addTask() {
+                const title = document.getElementById('taskTitle').value;
+                const description = document.getElementById('taskDescription').value;
+                const dueDate = document.getElementById('taskDate').value;
+                const priority = document.getElementById('taskPriority').value;
+    
+                if (title && description && dueDate && priority) {
+                    const task = { title, description, dueDate, priority };
+                    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                    tasks.push(task);
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+                    displayTasks();
+    
+                    document.getElementById('taskTitle').value = '';
+                    document.getElementById('taskDescription').value = '';
+                    document.getElementById('taskDate').value = '';
+                    document.getElementById('taskPriority').value = '';
+                    alert('Task added successfully!');
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            }
+    
+            function displayTasks() {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const taskList = document.getElementById('taskList');
+                taskList.innerHTML = '';
+    
+                tasks.forEach((task, index) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <strong>${task.title}</strong><br>
+                        <em>${task.description}</em><br>
+                        Due: ${task.dueDate} | Priority: ${task.priority}
+                        <button onclick="editTask(${index})">Edit</button>
+                        <button onclick="deleteTask(${index})">Delete</button>
+                    `;
+                    taskList.appendChild(li);
+                });
+            }
+    
+            function editTask(index) {
+                const tasks = JSON.parse(localStorage.getItem('tasks'));
+                const task = tasks[index];
+    
+</script>
+</body>
+</html>    
