@@ -85,6 +85,24 @@
             function editTask(index) {
                 const tasks = JSON.parse(localStorage.getItem('tasks'));
                 const task = tasks[index];
+                document.getElementById('taskTitle').value = task.title;
+            document.getElementById('taskDescription').value = task.description;
+            document.getElementById('taskDate').value = task.dueDate;
+            document.getElementById('taskPriority').value = task.priority;
+
+            deleteTask(index);
+        }
+
+        function deleteTask(index) {
+            let tasks = JSON.parse(localStorage.getItem('tasks'));
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+
+            displayTasks();
+        }
+
+        document.addEventListener('DOMContentLoaded', displayTasks);
+
     
 </script>
 </body>
