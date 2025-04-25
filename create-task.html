@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Task</title>
+    <link rel="stylesheet" href="Create.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="profile.html">My Profile</a>
+                <a href="cmanage task.html">Manage Task</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <h1>Create a New Task</h1>
+            <b>
+            <p>“Plan your day, achieve your goals, and make every moment count!”.</p>
+            </b>
+        </header>
+        <div class="form-container">
+            <div class="form-header">
+                <h2>Add Your Task Below</h2>
+                <b>
+                <p>“Organize your tasks to maximize productivity and make the most of your day.”</p>
+                </b>
+            </div>
+            <form id="taskForm" class="task-form">
+                <div class="input-group">
+                    <label for="title">Task Title</label>
+                    <input type="text" id="title" placeholder="Enter task title" required>
+                </div>
+                <div class="input-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Briefly describe the task..."></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate" required>
+                </div>
+                <div class="input-group">
+                    <label for="priority">Priority</label>
+                    <select id="taskPriority">
+                        <option value="" disabled selected>Task Priority</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-create">Add Task</button>
+                <div class="section">
+                    <b>
+                    <p>Stay positive and Don't Think About Negative Things.</p>
+                    </b>
+                </div>
+            </form>
+            <footer class="footer">
+                <b>
+                <p>&copy; 2024 Task Organizer by Sushant, Sahil</p>
+                </b>
+            </footer>
+        </div>
+    </div>
+    <script>
+        document.getElementById('taskForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const dueDate = document.getElementById('dueDate').value;
+            const priority = document.getElementById('taskPriority').value;
+            console.log('Task Title:', title);
+            console.log('Description:', description);
+            console.log('Due Date:', dueDate);
+            console.log('Priority:', priority);
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push({ title, description, dueDate, priority });
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            document.getElementById('taskForm').reset();
+            alert('Task added successfully! To See your Task and Manage Go To The Manage Task');
+        });
+    </script>
+</body>
+</html>
