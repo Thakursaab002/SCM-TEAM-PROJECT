@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('abstract-line-wave-linear-gradient-background-modern-colorful-wavy-line-abstract-background-vector.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: linear-gradient(135deg, #a8ff78, #78ffd6); 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    transform: scale(0);
+    animation: zoomIn 3s forwards;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header nav {
+    margin-bottom: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #6a1b9a;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff5722;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4a148c;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: #283593;
+    margin-bottom: 20px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
