@@ -3,9 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="manage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-</body>
-</html>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="profile.html">My Profile</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <h1>Manage Task</h1>
+        </header>
+        <h2><b>Stay organized with this task manager</b></h2>
+        <input type="text" id="taskTitle" placeholder="Task Title">
+        <br><br>
+        <textarea id="taskDescription" placeholder="Enter Task"></textarea>
+        <br><br>
+        <input type="date" id="taskDate">
+        <br><br>
+        <select id="taskPriority">
+            <option value="" disabled selected>Task Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <br><br>
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+        <footer>
+            <p>&copy; 2024 Task Manager. All rights reserved.</p>
+        </footer>
+        </div>
