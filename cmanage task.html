@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="manage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="profile.html">My Profile</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <h1>Manage Task</h1>
+        </header>
+        <h2><b>Stay organized with this task manager</b></h2>
+        <input type="text" id="taskTitle" placeholder="Task Title">
+        <br><br>
+        <textarea id="taskDescription" placeholder="Enter Task"></textarea>
+        <br><br>
+        <input type="date" id="taskDate">
+        <br><br>
+        <select id="taskPriority">
+            <option value="" disabled selected>Task Priority</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <br><br>
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+        <footer>
+            <p>&copy; 2024 Task Manager. All rights reserved.</p>
+        </footer>
+        </div>
+        <script>
+            function addTask() {
+                const title = document.getElementById('taskTitle').value;
+                const description = document.getElementById('taskDescription').value;
+                const dueDate = document.getElementById('taskDate').value;
+                const priority = document.getElementById('taskPriority').value;
+    
+                if (title && description && dueDate && priority) {
+                    const task = { title, description, dueDate, priority };
+                    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                    tasks.push(task);
+                    localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+                    displayTasks();
+    
+                    document.getElementById('taskTitle').value = '';
+                    document.getElementById('taskDescription').value = '';
+                    document.getElementById('taskDate').value = '';
+                    document.getElementById('taskPriority').value = '';
+                    alert('Task added successfully!');
+                } else {
+                    alert('Please fill in all fields.');
+                }
+            }
+    
+            function displayTasks() {
+                const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+                const taskList = document.getElementById('taskList');
+                taskList.innerHTML = '';
+    
+                tasks.forEach((task, index) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <strong>${task.title}</strong><br>
+                        <em>${task.description}</em><br>
+                        Due: ${task.dueDate} | Priority: ${task.priority}
+                        <button onclick="editTask(${index})">Edit</button>
+                        <button onclick="deleteTask(${index})">Delete</button>
+                    `;
+                    taskList.appendChild(li);
+                });
+            }
+    
+            function editTask(index) {
+                const tasks = JSON.parse(localStorage.getItem('tasks'));
+                const task = tasks[index];
+                document.getElementById('taskTitle').value = task.title;
+            document.getElementById('taskDescription').value = task.description;
+            document.getElementById('taskDate').value = task.dueDate;
+            document.getElementById('taskPriority').value = task.priority;
+
+            deleteTask(index);
+        }
+
+        function deleteTask(index) {
+            let tasks = JSON.parse(localStorage.getItem('tasks'));
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+
+            displayTasks();
+        }
+
+        document.addEventListener('DOMContentLoaded', displayTasks);
+
+    
+</script>
+</body>
+</html>    
