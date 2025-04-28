@@ -70,3 +70,7 @@
 ```bash
 # 1-Click Setup (requires Node.js)
 npx degit Thakursaab002/TO-DO-LIST todolist && cd todolist && start index.html
+
+## 🚀 Contributors
+
+For a list of all contributors, check out the [CONTRIBUTORS.md](CONTRIBUTORS.md) file.
