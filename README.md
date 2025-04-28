@@ -74,3 +74,13 @@ npx degit Thakursaab002/TO-DO-LIST todolist && cd todolist && start index.html
 ## 🚀 Contributors
 
 For a list of all contributors, check out the [CONTRIBUTORS.md](CONTRIBUTORS.md) file.
+## 🚀 Contributors
+
+Thanks to these wonderful people:
+
+- [@Thakursaab002](https://github.com/Thakursaab002)
+- [@heyyshivm1031](https://github.com/heyyshivm1031)
+- [@saurabh5540](https://github.com/saurabh5540)
+- [@AgnihotriNikhil](https://github.com/AgnihotriNikhil)
+
+> (GitHub also shows contributors automatically on the repo sidebar.)
