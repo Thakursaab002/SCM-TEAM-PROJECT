@@ -76,11 +76,36 @@ npx degit Thakursaab002/TO-DO-LIST todolist && cd todolist && start index.html
 For a list of all contributors, check out the [CONTRIBUTORS.md](CONTRIBUTORS.md) file.
 ## 🚀 Contributors
 
-Thanks to these wonderful people:
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Thakursaab002">
+        <img src="https://avatars.githubusercontent.com/u/YourUserId1" width="100px;" alt="Thakursaab002"/>
+        <br />
+        <sub><b>Thakursaab002</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/heyyshivm1031">
+        <img src="https://avatars.githubusercontent.com/u/YourUserId2" width="100px;" alt="heyyshivm1031"/>
+        <br />
+        <sub><b>heyyshivm1031</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/saurabh5540">
+        <img src="https://avatars.githubusercontent.com/u/YourUserId3" width="100px;" alt="saurabh5540"/>
+        <br />
+        <sub><b>saurabh5540</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/AgnihotriNikhil">
+        <img src="https://avatars.githubusercontent.com/u/YourUserId4" width="100px;" alt="AgnihotriNikhil"/>
+        <br />
+        <sub><b>AgnihotriNikhil</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-- [@Thakursaab002](https://github.com/Thakursaab002)
-- [@heyyshivm1031](https://github.com/heyyshivm1031)
-- [@saurabh5540](https://github.com/saurabh5540)
-- [@AgnihotriNikhil](https://github.com/AgnihotriNikhil)
-
-> (GitHub also shows contributors automatically on the repo sidebar.)
