@@ -71,36 +71,3 @@
 # 1-Click Setup (requires Node.js)
 npx degit Thakursaab002/TO-DO-LIST todolist && cd todolist && start index.html
 
-## 🚀 Contributors
-
-<br/>
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/Thakursaab002">
-        <img src="https://avatars.githubusercontent.com/u/130486057" width="100px;" alt="Thakursaab002"/><br/>
-        <sub><b>Thakursaab002</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/heyyshivm1031">
-        <img src="https://avatars.githubusercontent.com/u/163434572" width="100px;" alt="heyyshivm1031"/><br/>
-        <sub><b>heyyshivm1031</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/saurabh5540">
-        <img src="https://avatars.githubusercontent.com/u/163434680" width="100px;" alt="saurabh5540"/><br/>
-        <sub><b>saurabh5540</b></sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/AgnihotriNikhil">
-        <img src="https://avatars.githubusercontent.com/u/163434836" width="100px;" alt="AgnihotriNikhil"/><br/>
-        <sub><b>AgnihotriNikhil</b></sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
