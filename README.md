@@ -73,35 +73,32 @@ npx degit Thakursaab002/TO-DO-LIST todolist && cd todolist && start index.html
 
 ## 🚀 Contributors
 
-For a list of all contributors, check out the [CONTRIBUTORS.md](CONTRIBUTORS.md) file.
-## 🚀 Contributors
-
 <table>
   <tr>
     <td align="center">
       <a href="https://github.com/Thakursaab002">
-        <img src="https://avatars.githubusercontent.com/u/YourUserId1" width="100px;" alt="Thakursaab002"/>
+        <img src="https://avatars.githubusercontent.com/u/130486057" width="100px;" alt="Thakursaab002"/>
         <br />
         <sub><b>Thakursaab002</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/heyyshivm1031">
-        <img src="https://avatars.githubusercontent.com/u/YourUserId2" width="100px;" alt="heyyshivm1031"/>
+        <img src="https://avatars.githubusercontent.com/u/163434572" width="100px;" alt="heyyshivm1031"/>
         <br />
         <sub><b>heyyshivm1031</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/saurabh5540">
-        <img src="https://avatars.githubusercontent.com/u/YourUserId3" width="100px;" alt="saurabh5540"/>
+        <img src="https://avatars.githubusercontent.com/u/163434680" width="100px;" alt="saurabh5540"/>
         <br />
         <sub><b>saurabh5540</b></sub>
       </a>
     </td>
     <td align="center">
       <a href="https://github.com/AgnihotriNikhil">
-        <img src="https://avatars.githubusercontent.com/u/YourUserId4" width="100px;" alt="AgnihotriNikhil"/>
+        <img src="https://avatars.githubusercontent.com/u/163434836" width="100px;" alt="AgnihotriNikhil"/>
         <br />
         <sub><b>AgnihotriNikhil</b></sub>
       </a>
