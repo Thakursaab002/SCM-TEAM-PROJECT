@@ -1,0 +1,64 @@
+# Application Configuration
+application:
+  name: "MyFirstApp"
+  version: "1.0.0"
+  author: "Sushant Thakur"
+  license: "MIT"
+
+# Server Settings
+server:
+  host: "localhost"
+  port: 8000
+  debug_mode: true
+
+# Database Settings
+database:
+  type: "postgresql"
+  username: "admin"
+  password: "password123"
+  host: "localhost"
+  port: 5432
+  dbname: "myappdb"
+
+# Environment Settings
+environment:
+  - development
+  - production
+  - testing
+
+# Features Enabled
+features:
+  authentication: true
+  payments: false
+  logging: true
+
+# API Endpoints
+api:
+  base_url: "https://api.myfirstapp.com/v1"
+  timeout_seconds: 30
+  retries: 3
+
+# Default User Roles
+user_roles:
+  - admin
+  - user
+  - guest
+
+# Logging Settings
+logging:
+  level: "info"
+  file: "logs/app.log"
+
+# Build Information
+build:
+  build_number: 102
+  release_date: 2024-04-27
+
+# Deployment Settings
+deployment:
+  provider: "AWS"
+  region: "us-east-1"
+  autoscaling: true
+  instances:
+    min: 2
+    max: 10
