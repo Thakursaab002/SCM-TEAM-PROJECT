@@ -57,7 +57,6 @@
     const matchedUser = users.find(user => 
       user.username === enteredUsername && user.password === enteredPassword
     );
-
     if (matchedUser) {
       localStorage.setItem("loggedInUser", matchedUser.username);
       alert("Login successful!");
