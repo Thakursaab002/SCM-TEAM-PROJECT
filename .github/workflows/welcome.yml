@@ -1,16 +1,9 @@
-name: Welcome new contributors
-
-on:
-  pull_request_target:
-    types: [opened]
-
+# .github/workflows/ci.yml
+name: CI
+on: [push]
 jobs:
-  welcome:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - name: Greet the contributor
-        uses: actions/first-interaction@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-message: 'Thank you for your first pull request! We appreciate your contribution. 🎉'
-
+      - uses: actions/checkout@v4
+      - run: echo "Add your tests here"
