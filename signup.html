@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap">
+    <title>Signup Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            background: url('http://codingstella.com/wp-content/uploads/2024/01/download-5.jpeg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            animation: animateBg 5s linear infinite;
+        }
+
+        @keyframes animateBg {
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .login-box {
+            position: relative;
+            width: 500px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            backdrop-filter: blur(15px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            margin: 20px 0;
+            border-bottom: 1px solid #fff;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+            color: #fff;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1.2em;
+            color: #fff;
+            padding: 0 35px 0 5px;
+        }
+
+        .remember-forgot {
+            font-size: 1em;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+
+        .remember-forgot input {
+            margin-right: 8px;
+        }
+
+        .remember-forgot a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            height: 50px;
+            background-color: #fff;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #000;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .register-link {
+            font-size: 1.1em;
+            color: #fff;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .register-link a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .error-message {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 500px) {
+            .login-box {
+                width: 90%;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            button {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="login-box">
+          <form id="signup-form" method="POST">
+            <h2>Signup</h2>
+            
+            <div class="input-box">
+              <input type="text" id="username" name="username" required>
+              <label for="username">Username</label>
+              <div id="username-error" class="error-message"></div>
+            </div>
+            
+            <div class="input-box">
+              <input type="email" id="email" name="email" required>
+              <label for="email">Email</label>
+              <div id="email-error" class="error-message"></div>
+            </div>
+    
+            <div class="input-box">
+              <input type="password" id="password" name="password" required>
+              <label for="password">Password</label>
+              <div id="password-error" class="error-message"></div>
+            </div>
+    
+            <div class="input-box">
+              <input type="password" id="confirm-password" name="confirm-password" required>
+              <label for="confirm-password">Confirm Password</label>
+              <div id="confirm-password-error" class="error-message"></div>
+            </div>
+    
+            <div class="remember-forgot">
+              <label><input type="checkbox" name="terms" required> I agree to the <a href="terms.html">Terms and Conditions</a></label>
+            </div>
+    
+            <button type="submit">Signup</button>
+    
+            <div class="register-link">
+              <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+          </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById("signup-form");
+        document.getElementById("username").addEventListener("input", () => validateUsername());
+        document.getElementById("email").addEventListener("input", () => validateEmail());
+        document.getElementById("password").addEventListener("input", () => validatePassword());
+        document.getElementById("confirm-password").addEventListener("input", () => validateConfirmPassword());
+
+        function validateUsername() {
+            const username = document.getElementById("username").value;
+            const usernamePattern = /^[\w\d_]+$/;
+            const usernameError = document.getElementById("username-error");
+            if (!usernamePattern.test(username)) {
+                usernameError.textContent = "Username must only contain letters, digits, or underscores.";
+            } else {
+                usernameError.textContent = "";
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById("email").value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailError = document.getElementById("email-error");
+            if (!emailPattern.test(email)) {
+                emailError.textContent = "Please enter a valid email address.";
+            } else {
+                emailError.textContent = "";
+            }
+        }
+        
+        function validatePassword() {
+            const password = document.getElementById("password").value;
+            const passwordPattern = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%?&]{8,}$/;
+            const passwordError = document.getElementById("password-error");
+            if (!passwordPattern.test(password)) {
+                passwordError.textContent = "Password must be at least 8 characters long, include uppercase, lowercase, a number, and a special character.";
+            } else {
+                passwordError.textContent = "";
+            }
+        }
+
+        function validateConfirmPassword() {
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+            const confirmPasswordError = document.getElementById("confirm-password-error");
+            if (confirmPassword !== password) {
+                confirmPasswordError.textContent = "Passwords do not match.";
+            } else {
+                confirmPasswordError.textContent = "";
+            }
+        }
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirm-password").value;
+
+            validateUsername();
+            validateEmail();
+            validatePassword();
+            validateConfirmPassword();
+
+            if (
+                document.getElementById("username-error").textContent ||
+                document.getElementById("email-error").textContent ||
+                document.getElementById("password-error").textContent ||
+                document.getElementById("confirm-password-error").textContent
+            ) {
+                return;
+            }
+
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            const emailExists = users.some(user => user.email === email);
+            const usernameExists = users.some(user => user.username === username);
+
+            if (emailExists) {
+                alert("Email is already registered. Please use a different email or login.");
+                return;
+            }
+
+            if (usernameExists) {
+                alert("Username is already taken. Please choose a different username.");
+                return;
+            }
+            const newUser = { username, email, password };
+            users.push(newUser);
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Sign-up successful! Redirecting to login page...");
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
