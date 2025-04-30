@@ -395,4 +395,11 @@ a:hover {
     .footer-links ul {
         text-align: center;
     }
+
+    .features, .benefits {
+        flex-direction: column;
+    }
+    .team {
+        grid-template-columns: 1fr;
+    }
 }
