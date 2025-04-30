@@ -1,9 +1,15 @@
 # .github/workflows/ci.yml
 name: CI
+
 on: [push]
+
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - run: echo "Add your tests here"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Placeholder Test Step
+        run: echo "Add your tests here"
