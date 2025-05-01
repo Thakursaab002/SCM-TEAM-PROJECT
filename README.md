@@ -57,7 +57,7 @@ To-Do List App - Edit from feature/conflict-demo branch
 </div>
 <p>
 ## Project Title
-To-Do List App - Edit from main branch
+To-Do List App - Conflict resolved by combining both versions
 </p>
 ---
 
