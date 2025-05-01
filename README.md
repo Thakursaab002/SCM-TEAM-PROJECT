@@ -11,6 +11,7 @@
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-FF5722?style=for-the-badge&logo=vercel)](https://your-demo-link.com)
 [![GitHub Stars](https://img.shields.io/github/stars/Thakursaab002/TO-DO-LIST?style=for-the-badge&logo=github)](https://github.com/Thakursaab002/TO-DO-LIST/stargazers)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+![GitHub Contributors](https://contrib.rocks/image?repo=your-username/your-repo)
 
 </div>
 
