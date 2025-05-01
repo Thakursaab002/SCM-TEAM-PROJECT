@@ -50,7 +50,10 @@
 - 🔄 Real-time sync  
 
 </div>
-
+## Project Title
+<p>
+To-Do List App - Edit from feature/conflict-demo branch
+</p>
 </div>
 <p>
 ## Project Title
