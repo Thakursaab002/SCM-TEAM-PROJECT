@@ -20,6 +20,7 @@ nav {
     justify-content: space-between;
     margin: 1rem;
     padding: 10px;
+    flex-wrap: wrap;
 }
 
 nav .left-nav {
@@ -394,5 +395,39 @@ a:hover {
 
     .footer-links ul {
         text-align: center;
+    }
+
+    .features, .benefits {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .team {
+        grid-template-columns: 1fr;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .features, .benefits {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .team-member {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .btn1, .btn2, .btn-login {
+        font-size: 12px;
+        padding: 8px 15px;
     }
 }
