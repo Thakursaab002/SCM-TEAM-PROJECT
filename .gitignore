@@ -2,3 +2,24 @@
 config.yaml
 *.env
 /logs
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Log files
+*.log
+
+# Node.js dependencies (if you use Node)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
